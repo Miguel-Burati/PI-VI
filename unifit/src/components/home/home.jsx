@@ -2,15 +2,15 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function Home() {
   return (
-    <View>
+    <View style={styles.containerPrincipal}>
         <View style={styles.containerGeral}>
             <View>
-              <Text style={{color:'#ffff'}}>Treino do Dia</Text>
-              <View style={styles.containerTreinoDia}></View>
+              <Text style={styles.textUpContainer}>Treino do Dia</Text>
+              <View style={styles.containerBranco}></View>
             </View>
             <View>
-              <Text style={{color:'#ffff'}}>Ranking</Text>
-              <View style={styles.containerTreinoDia}></View>
+              <Text style={styles.textUpContainer}>Ranking</Text>
+              <View style={styles.containerBranco}></View>
             </View>
         </View>
     </View>
@@ -19,17 +19,32 @@ export default function Home() {
 
 const styles = StyleSheet.create({
 
-  containerGeral: {
+  containerPrincipal: {
     flex: 1,
-    margin: 'auto',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
-  containerTreinoDia: {
+  containerGeral: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 50,
+  },
+
+  containerBranco: {
     backgroundColor: '#ffffff',
     width: 300,
     height: 200,
     borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#000000',
+    borderWidth: 2,
+    borderColor: '#000000ff',
+  },
+
+  textUpContainer: {
+    color:'#ffff',
+    marginLeft:10,
+    marginBottom:5,
   }
+
 });
